@@ -1,11 +1,57 @@
+/*
+Main:
+Innehåller ingen kod utan här importerar du bara in dina partials.
+
+This file should not contain anything but @import and comments.
+
+Files should be imported according to the folder they live in, 
+one after the other in the following order:
+
+    utilities/
+    vendors/
+    base/
+    layout/
+    components/
+    pages/
+    theme/
+
+In order to preserve readability, the main file should respect these guidelines:
+
+    one file per @import;
+    one @import per line;
+    no new line between two imports from the same folder;
+    a new line after the last import from a folder;
+    file extensions and leading underscores omitted.
+*/
+
+@import 'utilities/functions';
+@import 'utilities/mixins';
+@import 'utilities/variables';
+
+@import 'base/base';
+
+@import 'layout/footer';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/navigation';
+
+@import 'components/component';
+
+@import 'pages/index';
+@import 'pages/SASS';
+
+@import 'theme/theme';
+
 /* 
-Variabler (minst färgschema ska lagras i variabler)
-Color functions (darken och lighten ska som minst användas, men använd gärna fler)
-Nesting
-Mixins
-Selector inheritance (nyckelordet "@extend").
-If/else-satser.
-Minst en partial
-Partials med en god filstruktur för CSS-kod 
+    FÖR UPPGIFTEN:
+
+        Variabler (minst färgschema ska lagras i variabler)
+        Color functions (darken och lighten ska som minst användas, men använd gärna fler)
+        Nesting
+        Mixins
+        Selector inheritance (nyckelordet "@extend").
+        If/else-satser.
+        Minst en partial
+        Partials med en god filstruktur för CSS-kod 
 */
 
