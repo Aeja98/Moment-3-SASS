@@ -24,10 +24,9 @@ In order to preserve readability, the main file should respect these guidelines:
     file extensions and leading underscores omitted.
 */
 
-@import 'utilities/functions';
-@import 'utilities/mixins';
-@import 'utilities/variables';
-
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/variables';
 @import 'base/base';
 
 @import 'layout/footer';
@@ -49,8 +48,8 @@ In order to preserve readability, the main file should respect these guidelines:
         Color functions (darken och lighten ska som minst användas, men använd gärna fler)
         Nesting
         Mixins
-        Selector inheritance (nyckelordet "@extend").
-        If/else-satser.
+        Selector inheritance (nyckelordet "@extend")
+        If/else-satser
         Minst en partial
         Partials med en god filstruktur för CSS-kod 
 */
