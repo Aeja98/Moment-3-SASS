@@ -1,0 +1,16 @@
+@mixin theme($theme){
+    background-color: map-get($theme, background);
+    color: map-get($theme, font);
+
+    nav, footer {
+        background-color: map-get($theme, navFoot);
+        a {
+            color: map-get($theme, Link);
+        }
+    }
+    .startMain, .sassMain {
+        background-image: linear-gradient(to bottom left, map-get($theme, BodyMain), map-get($theme, BodySec)); 
+        color: map-get($theme, bodyFont);
+    }
+}
+
