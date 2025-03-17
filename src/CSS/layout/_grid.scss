@@ -1,1 +1,24 @@
 /* Grid system */
+body {
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 2fr 1fr;
+};
+nav {
+    grid-row: 1;
+};
+
+.startMain {
+    grid-row: 2;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 1%;
+};
+.sassMain {
+    grid-row: 2;
+};
+
+footer {
+    grid-row: 3;
+};
