@@ -29,17 +29,12 @@ In order to preserve readability, the main file should respect these guidelines:
 @import 'base/variables';
 @import 'base/base';
 
-@import 'layout/footer';
 @import 'layout/grid';
-@import 'layout/header';
-@import 'layout/navigation';
+@import 'layout/body';
+@import 'layout/nav';
+@import 'layout/footer';
 
 @import 'components/component';
-
-@import 'pages/index';
-@import 'pages/SASS';
-
-@import 'theme/theme';
 
 /* 
     FÖR UPPGIFTEN:
