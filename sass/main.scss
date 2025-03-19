@@ -1,9 +1,10 @@
+//Main folder doesnt include any code. Only importing the other scss files
 
 @import 'base/mixins';
 @import 'base/variables';
-@import 'base/function';
 
 @import 'layout/layout';
 @import 'layout/grid';
+@import 'layout/mediaQueries';
 
 @import 'components/component';
