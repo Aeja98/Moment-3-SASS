@@ -10,19 +10,38 @@
 
 <body>
     <nav>
+        <div id="logga">
+            <picture id="Lightlogga">
+                <source type="image/webp" srcset="image/sun.png?as=webp">
+                <source type="image/png" srcset="image/sun.png">
+                <img id="dark" src="/src/image/sun.png" alt="sol logga för ljus färgtema">
+            </picture>
+            <picture id="Darklogga">
+                <source type="image/webp" srcset="image/moon.png?as=webp">
+                <source type="image/png" srcset="image/moon.png">
+                <img id="dark" src="/src/image/moon.png" alt="måne logga för mörk färgtema">
+            </picture>
+        </div>
+
         <h1>Startsida</h1>
-        <ul>
-            <li><a href="sass.html">SASS</a></li>
-            <li><a href="#">Sida 2</a></li>
-            <li><a href="#">Sida 3</a></li>
-            <li><a href="#">Sida 4</a></li>
-            <li><a href="#">Sida 5</a></li>
-        </ul>
-        
+
+        <div class="menu">
+            <input type="checkbox" id="check">
+            <label for="check" id="checkBtn">Meny</label>
+
+            <div class="navMenu">
+                <a href="sass.html">SASS</a>
+                <a href="#">Sida 2</a>
+                <a href="#">Sida 3</a>
+                <a href="#">Sida 4</a>
+                <a href="#">Sida 5</a>
+            </div>
+        </div>
+
     </nav>
 
     <div class="startMain">
-        <h2>Bilder på min hund</h2>
+        <h2 class="Text">Bilder på min hund</h2>
 
         <picture class="pic1">
             <source type="image/webp" srcset="image/Pic1.jpg?as=webp">
