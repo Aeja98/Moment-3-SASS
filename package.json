@@ -1,22 +1,22 @@
 {
-  "name": "moment_3",
+  "name": "sass",
   "version": "1.0.0",
   "author": "Angelica Adolfsson",
   "license": "ISC",
-  "description": "",
-  "source":["src/index.html", "src/SASS.html"],
-
-  "devDependencies": {
-    "parcel": "^2.13.3"
-  },
-
+  "source": [
+    "src/index.html",
+    "src/sass.html"
+  ],
   "scripts": {
     "start": "parcel",
     "build": "parcel build"
   },
-
-  "repository": {
-    "type": "git",
-    "url": "moment3-SASS"
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel": "^2.13.3",
+    "sharp": "^0.33.5"
   }
 }
