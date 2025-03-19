@@ -1,15 +1,22 @@
+//Body grid
 body {
     display:grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 3fr 1fr;
 };
+
+//Nav grid
 nav {
     grid-row: 1;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    #logga {grid-column: 1;}
+    h1 {grid-column: 2;}
+    .menu {grid-column: 3}
 };
 
+//Index main section grid
 .startMain {
     grid-row: 2;
     display:grid;
@@ -27,10 +34,12 @@ nav {
     }
 };
 
+//SASS main section grid
 .sassMain {
     grid-row: 2;
 };
 
+//Fotter grid
 footer {
     grid-row: 3;
     display: grid

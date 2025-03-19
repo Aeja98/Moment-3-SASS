@@ -1,3 +1,4 @@
+//Importing the color scheme mixin
 body {
     @include theme ($lightTheme);
 
@@ -5,26 +6,66 @@ body {
         @include theme($darkTheme);   
     }
 }
+
+//Overall styling
 nav {
     margin-bottom: 2%;
     padding: 1% 2%;
     font-family: 'Times New Roman', Times, serif;
+    #logga {
+        //Importing logo mixin. Changes depending on dark or light mode
+        @include themeLogga(light);
+        @media (prefers-color-scheme:dark) {
+            @include themeLogga(dark);
+        }
+        place-self: center;
+        img {width: 75%; height: 75%;}
+    }
     h1 {
         font-size: 2em; 
-        padding: 1% 3%;
         align-self: center;
     }
-    ul {
-        list-style: none; 
+    .menu {
         place-self: center end;
+        padding: 5%;
+        margin-right: 1%;
+        font-size: 1em;
     }
-    li {margin: 1% 0;}
+
+    //Menu 
+    #checkBtn {cursor: pointer;}
+    #check {display: none;}
+    .navMenu{
+        display: none;
+        position: fixed;
+        right: 1em;
+        width: 25%;
+        margin-top: 1.1em;
+        text-align: center;
+    }
+    #check:checked ~ .navMenu {display: block;}
+    a{
+
+        font-size: 1em;
+        padding: 0.5em;
+        margin: 0;
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+    }
 }
-.startMain, .sassMain {
+//Index page styling
+.startMain{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 2% 3%;
 }
 
+//SASS page styling
+.sassMain {
+    @extend .startMain;
+}
+
+//Footer styling
 footer {
     margin-top: 2%;
     text-align: center;
@@ -33,4 +74,3 @@ footer {
     ul{list-style: none;}
     li {line-height: 1.3em;}
 }
-
