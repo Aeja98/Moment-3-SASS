@@ -1,0 +1,32 @@
+// Font
+$font-body: Arial, Helvetica, sans-serif;
+$font-heading: "Trebuchet MS", Arial, sans-serif;
+
+// Light theme
+$light-bg: #bff2e1;
+$light-surface: #d3fff3;
+$light-text: #0a4a3f;
+$light-link: #054238;
+
+// Dark theme
+$dark-bg: #054238;
+$dark-surface: #0a4a3f;
+$dark-text: #edfffa;
+$dark-link: #bff2e1;
+
+// Shared
+$radius: 0.6rem;
+$spacing: 1rem;
+
+// If/else via function
+@function theme-color($theme, $token) {
+    @if $theme == light and $token == bg { @return $light-bg; }
+    @else if $theme == light and $token == surface { @return $light-surface; }
+    @else if $theme == light and $token == text { @return $light-text; }
+    @else if $theme == light and $token == link { @return $light-link; }
+    @else if $theme == dark and $token == bg { @return $dark-bg; }
+    @else if $theme == dark and $token == surface { @return $dark-surface; }
+    @else if $theme == dark and $token == text { @return $dark-text; }
+    @else if $theme == dark and $token == link { @return $dark-link; }
+    @else { @return #ff00ff; } // fallback for debugging
+}

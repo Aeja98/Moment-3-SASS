@@ -1,0 +1,50 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// @extend requirement
+%card-base {
+    border-radius: $radius;
+    padding: 0.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+nav {
+    padding: 0.8rem 1rem;
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 0.7rem;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        font-size: 0.7em
+    }
+    
+    a {
+        @include nav-link(theme-color(light, surface), theme-color(light, link));
+    }
+}
+
+.imageCard {
+    width: 100%;
+    max-width: 520px;
+    @extend %card-base;
+    background: theme-color(light, surface);
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: $radius;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    nav a {
+        @include nav-link(theme-color(dark, surface), theme-color(dark, link));
+    }
+        .imageCard {
+        background: theme-color(dark, surface);
+    }
+}

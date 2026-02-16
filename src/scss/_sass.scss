@@ -1,0 +1,20 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.sassLayout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.sassContent {
+    max-width: 900px;
+    margin: auto;
+    padding: 1rem;
+    section {
+        margin-bottom: 1.2rem;
+    }
+    ul {
+        padding-left: 1.2rem;
+    }
+}

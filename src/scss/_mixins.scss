@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+// Responsive mixin
+@mixin respond($bp) {
+  @if $bp == small {
+    @media (max-width: 700px) { @content; }
+  } @else if $bp == medium {
+    @media (max-width: 1000px) { @content; }
+  } @else {
+    @media (min-width: 1001px) { @content; }
+  }
+}
+
+// Button/link style
+@mixin nav-link($bg, $text) {
+  background: $bg;
+  color: $text;
+  padding: 0.6rem 0.9rem;
+  border-radius: $radius;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid darken($bg, 12%);
+  transition: 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background: lighten($bg, 8%);
+    text-decoration: underline;
+  }
+}

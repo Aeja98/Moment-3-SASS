@@ -1,63 +1,56 @@
 <!DOCTYPE html>
-<html lang="se">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href= "sass/main.scss"  />
-    <title>SASS-sida</title>
+    <title>SASS</title>
 </head>
 
-<body>
-    <nav>
-        <div id="logga">
-            <picture id="Lightlogga">
-                <source type="image/webp" srcset="image/sun.png?as=webp">
-                <source type="image/png" srcset="image/sun.png">
-                <img id="dark" src="/src/image/sun.png">
-            </picture>
-            <picture id="Darklogga">
-                <source type="image/webp" srcset="image/moon.png?as=webp">
-                <source type="image/png" srcset="image/moon.png">
-                <img id="dark" src="/src/image/moon.png">
-            </picture>
-        </div>
-        
-        <h1>SASS-sida</h1>
+<body class="sassLayout">
+    <header>
+        <h1>Sass</h1>
+        <nav aria-label="Huvudmeny">
+            <ul>
+                <li><a href="/index.html">Start</a></li>
+                <li><a href="/sass.html">SASS</a></li>
+                <li><a href="#">Om</a></li>
+                <li><a href="#">Galleri</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="menu">
-            <input type="checkbox" id="check">
-            <label for="check" id="checkBtn">Meny</label>
+    <main class="sassContent">
+        <h2>Utvärdering av SASS</h2>
 
-            <div class="navMenu">
-                <a href="sass.html">SASS</a>
-                <a href="#">Sida 2</a>
-                <a href="#">Sida 3</a>
-                <a href="#">Sida 4</a>
-                <a href="#">Sida 5</a>
-            </div>
-        </div>
-    </nav>
-    
-    <div class="sassMain">
-        <!-- 
-            Överskrifter och text med valfritt innehåll.
-            Undersidan SASS ska innehålla en utvärdering av ditt arbete med SASS. 
-                Vilka för- och nackdelar ser du med SASS? 
-                Hur var det att komma igång att arbete med en CSS-preprocessor?
-            En huvudmeny med minst fem meny-alternativ (kan länkas till enbart "#").
-            Webbplatsen ska ha stöd för ljust och mörkt tema med media query. Ta fram två färgscheman för detta.
-            Responsiv webbdesign, både på innehåll och meny. Ska fungera väl på stora och små enheter.
-        -->
+        <h3>Fördelar</h3>
+        <ul>
+            <li>Variabler gör det enkelt att hantera färger och typsnitt.</li>
+            <li>Partials och filstruktur gör koden mer organiserad.</li>
+            <li>Mixins och återanvändbara regler minskar upprepning.</li>
+        </ul>
+
+        <h3>Nackdelar</h3>
+        <ul>
+            <li>Det blir ett extra steg i arbetsflödet jämfört med ren CSS.</li>
+            <li>Är nytt och är ovan, så det känns llite krångligt</li>
+        </ul>
+
+        <h3>Att komma igång</h3>
         <p>
+            Känns lite krångligt i början, men när grundstrukturen va på plats blev det lättare. Jag upplever att SASS gör större projekt mer organiserad och enklare att navigera och lättare att underhålla.
         </p>
-    </div>
+    </main>
 
     <footer>
         <ul>
-            <li>DT211G Datateknik - Frontend-baserad webbutveckling</li>
+            <li>DT211G Datateknik</li>
+            <li>Frontend-baserad webbutveckling</li>
             <li>Angelica Adolfsson</li>
         </ul>
     </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
 </body>
 </html>
