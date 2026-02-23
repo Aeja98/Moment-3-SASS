@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Index</title>
+    <title>Animering</title>
 </head>
 
 <body class="indexLayout">
     <header>
-        <h1>Webbutveckling - Frontend-baserad Webbutveckling</h1>
+        <h1>Animering</h1>
         <nav aria-label="Huvudmeny">
             <ul>
                 <li><a href="/index.html">Start</a></li>
@@ -21,7 +21,26 @@
         </nav>
     </header>
 
-    <main>
+    <main class="animationContent">
+        <section class="animationSec">
+            <h2 class="hoverSpin">Hover på den här texten 👀</h2>
+            <p>Exempel på transform & transition</p>
+        </section>
+
+        <section class="animationSec">
+            <h2>Rörligt objekt</h2>
+            <p>Klicka på knappen</p>
+
+            <div class="playArea" id="playArea">
+                <button class="animatedBtn" id="animatedBtn" type="button">Fånga mig!</button>
+            </div>
+        </section>
+
+        <section class="animationSec">
+            <h2>Keyframes-animation</h2>
+            <div class="load" aria-label="Laddar"></div>
+            <p>Exempel på @keyframes-animation (laddningsindikator).</p>
+        </section>
     </main>
     
     <footer>
