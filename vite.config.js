@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, "index.html"),
         sass: resolve(__dirname, "sass.html"),
+        animering: resolve(__dirname, "animering.html")
       },
     },
   },
