@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Index</title>
+    <title>Diagram</title>
   <script type="module" crossorigin src="/assets/main-ByAdkn0B.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main-CPdFfoC-.css">
 </head>
@@ -23,24 +23,19 @@
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Bilder</h2>
-            <div class="picGrid">
-                <picture class="imageCard">
-                    <source type="image/avif" srcset="/assets/img1-BkN8njgT.avif">
-                    <source type="image/webp" srcset="/assets/img1-Cn4C7QTB.webp">
-                    <img src="/assets/img1-7Li_9q4M.jpg" alt="Bild på min hund när han ligger ute i solen" loading="lazy" decoding="async">
-                </picture>
-                <picture class="imageCard">
-                    <source type="image/avif" srcset="/assets/img2-Bysg3y_P.avif">
-                    <source type="image/webp" srcset="/assets/img2-DCnYinhc.webp">
-                    <img src="/assets/img2-CdqFxI6h.jpg" alt="Bild på min hund när han sover på golvet" loading="lazy" decoding="async">
-                </picture>
+    <main class="diagramContent">
+        <section class="diagramSec">
+            <h2>6 mest sökta kurser (HT2025)</h2>
+            <canvas id="coursesChart" aria-label="Stapeldiagram kurser" role="img"></canvas>
+        </section>
 
-                
+        <section class="diagramSec">
+            <h2>5 mest sökta kurser (HT2025)</h2>
+            <div class="pieWrap">
+                <canvas id="programsChart" aria-label="Cirkeldiagram program" role="img"></canvas>
             </div>
         </section>
+
     </main>
     
     <footer>

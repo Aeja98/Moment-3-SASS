@@ -30,10 +30,3 @@ if (playArea && animatedBtn) {
         animatedBtn.style.transform = `translate(${x}px, ${y}px)`;
     });
 }
-
-//REMOVE WHEN DONE INSPECTING DATA
-(async () => {
-    const res = await fetch("/data/ht2025.json");
-    const data = await res.json();
-    console.log("HT2025 data:", data);
-})();

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Index</title>
+    <title>Karta</title>
   <script type="module" crossorigin src="/assets/main-ByAdkn0B.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main-CPdFfoC-.css">
 </head>
@@ -23,23 +23,28 @@
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Bilder</h2>
-            <div class="picGrid">
-                <picture class="imageCard">
-                    <source type="image/avif" srcset="/assets/img1-BkN8njgT.avif">
-                    <source type="image/webp" srcset="/assets/img1-Cn4C7QTB.webp">
-                    <img src="/assets/img1-7Li_9q4M.jpg" alt="Bild på min hund när han ligger ute i solen" loading="lazy" decoding="async">
-                </picture>
-                <picture class="imageCard">
-                    <source type="image/avif" srcset="/assets/img2-Bysg3y_P.avif">
-                    <source type="image/webp" srcset="/assets/img2-DCnYinhc.webp">
-                    <img src="/assets/img2-CdqFxI6h.jpg" alt="Bild på min hund när han sover på golvet" loading="lazy" decoding="async">
-                </picture>
+    <main class="mapContent">
+        <section class="mapSec">
+            <h2>Sök en plats</h2>
 
-                
-            </div>
+            <form id="mapForm">
+                <label for="placeInput">Plats:</label>
+                <input id="placeInput" type="text" placeholder="t.ex Stockholm" required />
+                <button type="submit">Sök</button>
+            </form>
+
+            <p id="placeStatus" role="status"></p>
+
+            <iframe
+                id="mapFrame"
+                title="openStreetMap"
+                width="100%"
+                height="420"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+            <p class="attribution">Kartdata © OpenStreetMap-bidragsgivare</p>
         </section>
     </main>
     
