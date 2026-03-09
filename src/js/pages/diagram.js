@@ -43,6 +43,12 @@ function topByTotal(data, type, count) {
     .sort((a, b) => b.total - a.total)
     .slice(0, count);
 }
+//Gets text color from theme
+function getChartTextColor() {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "#edfffa" // dark theme text
+    : "#0a4a3f"; // light theme text
+};
 
 //Initialize diagram page - render both charts
 /**
@@ -54,6 +60,18 @@ export async function initChartsPage() {
   const coursesCanvas = document.getElementById("coursesChart");
   const programsCanvas = document.getElementById("programsChart");
   if (!coursesCanvas || !programsCanvas) return;
+
+  //Decides text color
+  const textColor = getChartTextColor();
+
+  // ---- GLOBAL DEFAULTS ----
+  Chart.defaults.color = textColor;
+  Chart.defaults.font.family = getComputedStyle(document.body).fontFamily;
+
+  Chart.defaults.plugins.legend.labels.color = textColor;
+
+  Chart.defaults.plugins.tooltip.titleColor = textColor;
+  Chart.defaults.plugins.tooltip.bodyColor = textColor;
 
   //Fetch full dataset
   const data = await fetchAdmissionData();
@@ -77,19 +95,25 @@ export async function initChartsPage() {
     options: {
       responsive: true,
       plugins: {
-        legend: { display: true },
-        tooltip: { enabled: true },
+        legend: {
+          display: true,
+          labels: {color: textColor},
+        },
+        tooltip: {enabled: true},
       },
       scales: {
         x: {
           ticks: {
-            // Long course names: keep readable
+            color: textColor,
             maxRotation: 60,
             minRotation: 20,
           },
         },
         y: {
           beginAtZero: true,
+          ticks: {
+            color: textColor,
+          },
         },
       },
     },
@@ -110,7 +134,10 @@ export async function initChartsPage() {
     options: {
       responsive: true,
       plugins: {
-        legend: { position: "bottom" },
+        legend: {
+          position: "bottom",
+          labels: {color: textColor},
+        },
       },
     },
   });
