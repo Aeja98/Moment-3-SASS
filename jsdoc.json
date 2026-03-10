@@ -1,4 +1,11 @@
 {
-    "source": { "include": ["src/js"], "includePattern": ".js$" },
-    "opts": { "destination": "docs" }
+    "source": {
+        "include": ["src/js"],
+        "includePattern": ".js$",
+        "excludePattern": "(node_modules/|public/docs/)"
+    },
+    "opts": {
+        "destination": "public/docs",
+        "recurse": true
+    }
 }
